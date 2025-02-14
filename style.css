@@ -317,6 +317,60 @@ footer p {
   font-size: 0.9rem;
 }
 
+/* Hamburger Menu Button */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: inherit; /* inherit text color */
+}
+
+/* Responsive styles for navigation */
+@media (max-width: 768px) {
+  /* Header & Navigation: Show logo and hamburger icon side by side */
+  .navbar {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+  }
+
+  .logo {
+    flex: 1;
+  }
+
+  .menu-toggle {
+    display: block;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    color: inherit;
+  }
+
+  /* Hide nav links by default; they will be shown when toggled */
+  .nav-links {
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    margin-top: 10px;
+    padding-left: 0;
+  }
+
+  .nav-links li {
+    width: 100%;
+    text-align: left;
+    margin: 10px 0;
+  }
+
+  /* When active, display nav links below the top row */
+  .nav-links.active {
+    display: flex;
+  }
+}
+
 @media (max-width: 768px) {
   .btn {
     padding: 15px 25px;
@@ -325,5 +379,195 @@ footer p {
 
   .nav-links li {
     margin-left: 20px;
+  }
+}
+
+/* Responsive Styles for Mobile Devices */
+@media (max-width: 768px) {
+  /* Hero Section */
+  #hero {
+    height: auto;
+    padding: 100px 20px;
+  }
+
+  .hero-content {
+    padding: 0 20px;
+  }
+
+  .hero-content h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero-content p {
+    font-size: 1rem;
+  }
+
+  /* Features Grid */
+  .features-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    margin-top: 30px;
+  }
+
+  /* Sections */
+  .section {
+    padding: 60px 20px;
+  }
+
+  /* Download Buttons */
+  .download-buttons {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  /* Contact Form */
+  form {
+    max-width: 90%;
+    padding: 20px;
+  }
+
+  form input,
+  form textarea {
+    font-size: 0.95rem;
+  }
+
+  form button {
+    font-size: 0.95rem;
+  }
+}
+
+/* Extended Responsive Rules for Mobile Devices */
+@media (max-width: 768px) {
+  /* Adjust fixed header */
+  header {
+    position: relative;
+    padding: 10px 0;
+  }
+
+  /* Navigation: Stack logo and links vertically */
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+  }
+
+  .logo a {
+    font-size: 1.5rem;
+  }
+
+  /* Hero Section adjustments */
+  #hero {
+    height: auto;
+    padding: 100px 20px 50px 20px;
+  }
+
+  .hero-content {
+    padding: 0 20px;
+    text-align: center;
+  }
+
+  .hero-content h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero-content p {
+    font-size: 1.1rem;
+  }
+
+  .btn {
+    padding: 15px 25px;
+    font-size: 0.9rem;
+  }
+
+  /* Features Section adjustments */
+  .features-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    margin-top: 30px;
+  }
+
+  /* Sections */
+  .section {
+    padding: 60px 20px;
+  }
+
+  /* Download Buttons: Stack vertically */
+  .download-buttons {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  /* Contact Form: Adjust width and input sizes */
+  form {
+    max-width: 90%;
+    padding: 20px;
+  }
+
+  form input,
+  form textarea {
+    font-size: 0.95rem;
+    padding: 12px;
+    border-radius: 25px;
+  }
+
+  form button {
+    font-size: 0.95rem;
+    padding: 12px;
+  }
+}
+
+/* Additional adjustments for very small devices */
+@media (max-width: 480px) {
+  /* Navigation: Reduce spacing */
+  .nav-links a {
+    font-size: 0.9rem;
+    padding: 5px;
+  }
+
+  /* Hero Section header size */
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+
+  .hero-content p {
+    font-size: 1rem;
+  }
+
+  /* Button icon spacing */
+  .btn ion-icon,
+  .btn i {
+    margin: 0 5px;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Navbar: logo and hamburger icon on top row */
+  .navbar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+  }
+
+  /* Hide nav links initially */
+  .nav-links {
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    padding: 0;
+    margin-top: 10px;
+  }
+
+  /* Make each nav item full width */
+  .nav-links li {
+    width: 100%;
+    text-align: left;
+    margin: 10px 0;
+  }
+
+  /* When active, display nav links in a new row beneath navbar */
+  .nav-links.active {
+    display: flex;
   }
 }

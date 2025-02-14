@@ -45,3 +45,13 @@ document.querySelectorAll('.download-btn').forEach(function (button) {
     );
   });
 });
+
+// Toggle navigation on small screen
+const menuToggle = document.querySelector('.menu-toggle');
+const navLinks = document.querySelector('.nav-links');
+
+if (menuToggle && navLinks) {
+  menuToggle.addEventListener('click', function () {
+    navLinks.classList.toggle('active');
+  });
+}
