@@ -65,7 +65,8 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 20px 0;
+  padding: 10px 15px;
+  width: 100%;
 }
 
 .logo a {
@@ -87,7 +88,7 @@ header {
 }
 
 .nav-links li {
-  margin-left: 30px;
+  margin-left: 40px;
 }
 
 .nav-links a {
@@ -280,6 +281,10 @@ form textarea {
   transition: all 0.3s ease;
 }
 
+form textarea {
+  border-radius: 18px;
+}
+
 form input:focus,
 form textarea:focus {
   border-color: #f39c12;
@@ -325,6 +330,7 @@ footer p {
   font-size: 2rem;
   cursor: pointer;
   color: inherit; /* inherit text color */
+  margin-top: 10px;
 }
 
 /* Responsive styles for navigation */
@@ -336,11 +342,9 @@ footer p {
     justify-content: space-between;
     padding: 10px;
   }
-
-  .logo {
-    flex: 1;
+  .navbar-flex-row {
+    flex-direction: column !important;
   }
-
   .menu-toggle {
     display: block;
     background: none;
@@ -358,13 +362,6 @@ footer p {
     margin-top: 10px;
     padding-left: 0;
   }
-
-  .nav-links li {
-    width: 100%;
-    text-align: left;
-    margin: 10px 0;
-  }
-
   /* When active, display nav links below the top row */
   .nav-links.active {
     display: flex;
@@ -375,10 +372,6 @@ footer p {
   .btn {
     padding: 15px 25px;
     font-size: 0.9rem;
-  }
-
-  .nav-links li {
-    margin-left: 20px;
   }
 }
 
@@ -441,7 +434,6 @@ footer p {
   /* Adjust fixed header */
   header {
     position: relative;
-    padding: 10px 0;
   }
 
   /* Navigation: Stack logo and links vertically */
@@ -507,7 +499,6 @@ footer p {
   form textarea {
     font-size: 0.95rem;
     padding: 12px;
-    border-radius: 25px;
   }
 
   form button {
@@ -547,14 +538,13 @@ footer p {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    padding: 10px 20px;
   }
 
   /* Hide nav links initially */
   .nav-links {
     display: none;
     width: 100%;
-    flex-direction: column;
+    flex-direction: row;
     padding: 0;
     margin-top: 10px;
   }
@@ -563,7 +553,8 @@ footer p {
   .nav-links li {
     width: 100%;
     text-align: left;
-    margin: 10px 0;
+    margin-left: 10px;
+    margin-right: 10px;
   }
 
   /* When active, display nav links in a new row beneath navbar */
